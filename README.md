@@ -1,9 +1,9 @@
-# pagina web "elon race"
-Esta pagina corresponde a un juego basado en pilotear un cohete espacial, ir esquivando distintos obstaculos que van apareciendo en el camino con el objetivo de salir del planeta tierra y llegar hasta el planeta marte. 
+# pagina web "Elon race"
+Esta pagina corresponde a un juego basado en pilotear un cohete espacial e ir esquivando distintos obstaculos que van apareciendo en el camino con el objetivo de salir del planeta tierra y llegar hasta el planeta marte. 
 
 ##Autores
-* Ossana Tomas
 * Suescun Nicolas
+* Ossana Tomas
 
 ##tecnologias usadas
 *HTML5
