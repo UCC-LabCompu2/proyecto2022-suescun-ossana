@@ -12,7 +12,7 @@ Estructura de Proyecto Lab de Compu II - 2022
 - [ ] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc, en todo caso emplear **.gitignore**)
 
 ### Sobre el Proyecto General
-- [ ] La página principal debe llamarse index
+- [x]La página principal debe llamarse index
 - [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
 - [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
 - [ ] Se debe emplear algún favicon
