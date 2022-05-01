@@ -1,3 +1,18 @@
-h1{
-    color: black;
+/*estilo por tag(se aplica a todos los selectores: */
+
+#Elon{
+     color: black; font-family: "Britannic Bold";
+;
 }
+
+h4{
+    color:black;
+
+;
+}
+h6{
+    color: blue;
+#lista1{
+   color: black;font-family: Arial;
+}
+
