@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df61d3e8-a907-487c-b4d4-11297c510444" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Imagenes/ImagenDeFondo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Imagenes/marr_spacx.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Imagenes/marr_spacx2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miEstilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/miEstilo.css" afterDir="false" />
@@ -78,7 +75,8 @@
       <workItem from="1651279500864" duration="11006000" />
       <workItem from="1651352538642" duration="889000" />
       <workItem from="1651353452379" duration="6414000" />
-      <workItem from="1651361368719" duration="13313000" />
+      <workItem from="1651361368719" duration="14307000" />
+      <workItem from="1651519437169" duration="1970000" />
     </task>
     <servers />
   </component>
