@@ -1,13 +1,15 @@
 /*estilo por tag(se aplica a todos los selectores: */
 
-#Elon{
-     color: white; font-family:"Britannic Bold";
-
-}
-
-h4{
+#Elon {
     color:white;
+    font-family: "Britannic Bold";
+    background-image: url(Imagenes/header-logo-universo-estrellas.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    text-shadow: 1.5px 1.5px #503b3b;
 }
+
+
 
 h6 {
     color: blue;
@@ -23,9 +25,5 @@ footer{
 body{
      background-image:url("Imagenes/marr_spacx2.jpg");
     background-size:cover;
-    background-attachment: fixed;
+     background-attachment: fixed;
  }
-#division1{
-    background-image: url("Imagenes/header-logo-universo-estrellas.jpg");
-    background-repeat:no-repeat  ;
-}
