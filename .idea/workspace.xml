@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df61d3e8-a907-487c-b4d4-11297c510444" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Imagenes/universo_estrellas.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jugar.html" beforeDir="false" afterPath="$PROJECT_DIR$/jugar.html" afterDir="false" />
@@ -77,8 +78,12 @@
       <workItem from="1651352538642" duration="889000" />
       <workItem from="1651353452379" duration="6414000" />
       <workItem from="1651361368719" duration="14307000" />
+<<<<<<< HEAD
       <workItem from="1651519437169" duration="5227000" />
       <workItem from="1651529431632" duration="6513000" />
+=======
+      <workItem from="1651519437169" duration="11957000" />
+>>>>>>> 6af61302a1ddc603e758a8db43517d38df155b67
     </task>
     <servers />
   </component>
