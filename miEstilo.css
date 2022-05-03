@@ -6,7 +6,7 @@
     background-image: url(Imagenes/header-logo-universo-estrellas.jpg);
     background-repeat: repeat-x;
     background-size: contain;
-    text-shadow: 1.5px 1.5px #503b3b;
+    text-shadow: 2px 2px #503b3b;
 }
 
 .boton {
@@ -21,13 +21,15 @@
     background:url(Imagenes/62468028-icono-de-cohete-botón-de-internet-en-el-fondo-blanco--removebg-preview.png);
     background-size: cover;
     border-radius: 50%;
+    font-size:25px;
+    font-weight: 500;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
     transition: .3s ease all;
 }
 .boton:hover{
-    box-shadow: 0 1px 30px #0b0b13;
+    box-shadow: 0 1px 50px #0b0b13;
     transform: scale(.95);
 }
 
@@ -35,33 +37,19 @@ h6 {
     color: blue;
 }
 
-#lista1{
+ul{
     color: white;
-    font-family:Arial;
+    font-family: Arial, serif;
 }
 footer{
-<<<<<<< HEAD
     color:white; font-family:"Kanit";text-align: left;align-items: end;
-=======
-    color:white;
-    font-family:"Kanit";text-align: left;align-items: end;
->>>>>>> 6af61302a1ddc603e758a8db43517d38df155b67
 }
 
 body{
-     background-image:url("Imagenes/marr_spacx2.jpg");
+    background-image:url("Imagenes/marr_spacx2.jpg");
     background-size:cover;
-     background-attachment: fixed;
- }
-<<<<<<< HEAD
-=======
-
-#boton{
-    height:60px; width:130px;
-
+    background-attachment: fixed;
 }
-
->>>>>>> 6af61302a1ddc603e758a8db43517d38df155b67
 #body2{
     background-image:url("Imagenes/universo_estrellas.jpg");
     background-size:cover;
@@ -72,8 +60,4 @@ body{
     background: white;
     position:absolute;
     right:23%;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 6af61302a1ddc603e758a8db43517d38df155b67
