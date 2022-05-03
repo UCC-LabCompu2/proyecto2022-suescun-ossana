@@ -15,10 +15,12 @@ h6 {
 }
 
 #lista1{
-    color: white;font-family: Arial;
+    color: white;
+    font-family:Arial;
 }
 footer{
-    color:white; font-family:"Kanit";text-align: right;align-items: end;
+    color:white;
+    font-family:"Kanit";text-align: left;align-items: end;
 }
 
 body{
@@ -26,3 +28,20 @@ body{
     background-size:cover;
      background-attachment: fixed;
  }
+
+#boton{
+    height:60px; width:130px;
+
+}
+
+#body2{
+    background-image:url("Imagenes/universo_estrellas.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+#myCanvas{
+    background: white;
+    position:absolute;
+    right:23%;
+}
