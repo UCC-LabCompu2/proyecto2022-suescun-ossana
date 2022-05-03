@@ -6,11 +6,13 @@
     background-image: url(Imagenes/header-logo-universo-estrellas.jpg);
     background-repeat: repeat-x;
     background-size: contain;
+    background-attachment: fixed;
     text-shadow: 2px 2px #0B0B13FF;
     margin: 5px;
     padding: 1px;
     text-align: left;
     font-size: 20px;
+
 }
 form{
     background: rgba(260,260,260,.2);
@@ -45,6 +47,19 @@ form{
 .boton:hover{
     transform: scale(.95);
 }
+.boton2{
+    position: absolute;
+    top: 85%;
+    right:12%;
+    height: 45px;
+    width:130px;
+    text-align: center;
+    font-family: "Arial Black";
+    color: #000000;
+    background: #985656;
+    border-radius:7%;
+
+}
 
 h6 {
     color: blue;
@@ -72,6 +87,14 @@ body{
 
 #myCanvas{
     background: white;
-    position:absolute;
-    right:23%;
+    background-attachment: fixed;
+    margin: 0 auto;
+    display: block;
+}
+
+.divsSaber{
+    border: 2px solid #1f1bff;
+    margin: 10px 900px 10px 10px;
+    padding: 5px 30px;
+    text-align: left;
 }
