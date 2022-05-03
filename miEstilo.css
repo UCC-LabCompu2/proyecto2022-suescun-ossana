@@ -1,35 +1,48 @@
 /*estilo por tag(se aplica a todos los selectores: */
 
 #Elon {
-    color:white;
+    color: white;
     font-family: "Britannic Bold";
     background-image: url(Imagenes/header-logo-universo-estrellas.jpg);
     background-repeat: repeat-x;
     background-size: contain;
-    text-shadow: 2px 2px #503b3b;
+    text-shadow: 2px 2px #0B0B13FF;
+    margin: 5px;
+    padding: 1px;
+    text-align: left;
+    font-size: 20px;
+}
+form{
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.2);
+    padding: 1px;
+    text-align: left;
+    font-size: 20px;
+}
+.div1{
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.2);
+    padding: 1px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+.div1 h4{
+    font-size: 15px;
 }
 
 .boton {
-    display: inline-flex;
     position: absolute;
     top: 45%;
     right: 10%;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     background:url(Imagenes/62468028-icono-de-cohete-botón-de-internet-en-el-fondo-blanco--removebg-preview.png);
     background-size: cover;
     border-radius: 50%;
-    font-size:25px;
-    font-weight: 500;
     border: none;
     cursor: pointer;
-    text-transform: uppercase;
-    transition: .3s ease all;
 }
 .boton:hover{
-    box-shadow: 0 1px 50px #0b0b13;
     transform: scale(.95);
 }
 
@@ -38,11 +51,12 @@ h6 {
 }
 
 ul{
-    color: white;
+    color: #020101;
     font-family: Arial, serif;
 }
 footer{
-    color:white; font-family:"Kanit";text-align: left;align-items: end;
+    color: #030303; font-family:"Kanit";text-align: left;align-items: end;
+    font-size: 15px;
 }
 
 body{
