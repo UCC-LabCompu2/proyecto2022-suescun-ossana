@@ -89,7 +89,7 @@ form{
     position: absolute;
     align-items: center;
     justify-content: center;
-    top: 40%;
+    top: 100%;
     right:55% ;
     height: 35px;
     width:130px;
@@ -121,84 +121,6 @@ footer{
     margin: 10px;
 }
 #myCanvas{
-<<<<<<< HEAD
-    background: white;
-    background-attachment: fixed;
-        margin: 0 auto;
-        display: block;
-    }
-
-    #divGeneral{
-        margin: auto;
-        margin-top:50px;
-        width: 900px;
-        height: 1200px;
-
-    }
-    #video {
-        float: right;
-        width:450px ;
-        height: 300px;
-        background: rgba(260,260,260,.2);
-        box-shadow: 0 15px 20px rgba(0,0,0,.4);
-        border-radius:7%;
-    }
-    .divideaproyecto1{
-      width: 445px;
-        height:210px;
-        text-align: left;
-        background: rgba(260,260,260,.2);
-        box-shadow: 0 15px 20px rgba(0,0,0,.4);
-        border-radius:7%;
-    }
-
-    .ideaproyecto2{
-        width: 445px;
-        height:235px;
-        text-align: left;
-        background: rgba(260,260,260,.2);
-        box-shadow: 0 15px 20px rgba(0,0,0,.4);
-        border-radius:7%;
-
-    }
-    .lista1{
-        font-size: 17px;
-    }
-
-    .ideaproyecto3{
-        width:435px ;
-        height:280px;
-        float: right;
-        background: rgba(260,260,260,.2);
-        box-shadow: 0 15px 20px rgba(0,0,0,.4);
-        border-radius:7%;
-        margin: 10px
-    }
-    .ideaproyecto4{
-        width:390px ;
-        height:500px;
-        float: left;
-        background-image:url("Imagenes/elon-musk-spacex-tesla-lanzamiento-nasa-1.jpg");
-        border-radius:7%;
-        margin: 10px;
-       }
-    .boton3{
-
-        position: absolute;
-        top: 170%;
-        right: 25%;
-        width: 180px;
-        height: 50px;
-        background-size: cover;
-        border-radius: 7%;
-        border: none;
-        cursor: pointer;
-        font-size: 20px;
-        font-family: "Times New Roman";
-        background: #917d3d;
-        cursor: pointer;
-    }
-=======
     background: white fixed;
     margin: 0 auto;
     display: block;
@@ -277,8 +199,6 @@ footer{
     font-family: "Roboto Light", serif;
     background: #a49b9a;
 }
->>>>>>> ebd36533a11c0c5eb37085fc50eb3e4b1e473d0b
 
-    .boton3:hover{
-        transform: scale(.95);
-    }
+.boton3:hover{
+    transform: scale(.95);}
