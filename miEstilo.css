@@ -1,27 +1,14 @@
 /*estilo por tag(se aplica a todos los selectores: */
 
-body{
-    background-image:url("Imagenes/marr_spacx2.jpg");
-    background-size:cover;
-    background-attachment: fixed;
-}
-#body2{
-    background-image:url("Imagenes/universo_estrellas.jpg");
-    background-size:cover;
-    background-attachment: fixed;
-}
-
 #Elon {
     color: white;
     font-family: "Britannic Bold";
-    background-image: url(Imagenes/90cae0cf9b6cded6456a336101de9fd8.jpg);
-    width: 1367px;
-    height: 120px;
+    background-image: url(Imagenes/header-logo-universo-estrellas.jpg);
     background-repeat: repeat-x;
     background-size: contain;
     background-attachment: fixed;
     text-shadow: 2px 2px #0B0B13FF;
-    margin:-11px;
+    margin: 5px;
     padding: 1px;
     text-align: left;
     font-size: 20px;
@@ -33,59 +20,54 @@ form{
     padding: 1px;
     text-align: left;
     font-size: 20px;
-    margin: 1%;
-    float: right;
 }
-.div1 {
-    background: rgba(260, 260, 260, .2);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
-    width: 650px;
-    height: 220px;
-    padding: 5px;
-    margin: 2%;
-    overflow: auto;
+.div1{
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.2);
+    padding: 1px;
+    text-align: left;
+    letter-spacing: 1px;
 }
 .div1 h4{
     font-size: 15px;
 }
 
 .boton {
-    display: inline-flex;
     position: absolute;
     top: 45%;
-    right:12%;
-    align-items: center;
-    justify-content: center;
-    width:170px;
-    height: 170px;
-    background: rgb(255, 0, 0);
-    color:white;
-    font-family: "Roboto Light";
-    font-size: 50px;
-    font-weight: 500;
-    cursor: pointer;
-    text-transform: uppercase;
-    border: rgba(26, 24, 24, 0.87);
+    right: 10%;
+    width: 180px;
+    height: 180px;
+    background:url(Imagenes/62468028-icono-de-cohete-botón-de-internet-en-el-fondo-blanco--removebg-preview.png);
+    background-size: cover;
     border-radius: 50%;
-    box-shadow: 0 15px 1px rgba(0,0,0,0.5);
-
+    border: none;
+    cursor: pointer;
 }
 .boton:hover{
-    box-shadow: 0 15px 1px rgba(0,0,0,0.5) ;
-    transform: scale(.90);
+    transform: scale(.95);
 }
-
 .boton2{
     position: absolute;
-    top: 85%;
-    right:12%;
-    height: 45px;
+    top: 82%;
+    left:9%;
+    float:left;
+    height: 35px;
     width:130px;
     text-align: center;
-    font-family: "Arial Black";
+    font-family: "Times New Roman";
+    font-size: 20px;
     color: #000000;
-    background: #985656;
-    border-radius:7%;
+    background: #917d3d;
+    border-radius:8%;
+    cursor: pointer;
+
+}
+.boton2:hover{
+    transform: scale(.95);
+}
+h6 {
+    color: blue;
 }
 
 ul{
@@ -95,19 +77,97 @@ ul{
 footer{
     color: #030303; font-family:"Kanit";text-align: left;align-items: end;
     font-size: 15px;
-    float: left;
-    margin: 20px auto;
+}
+
+body{
+    background-image:url("Imagenes/marr_spacx2.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+}
+#body2{
+    background-image:url("Imagenes/universo_estrellas.jpg");
+    background-size:cover;
+    background-attachment: fixed;
 }
 
 #myCanvas{
-    background: white fixed;
+    background: white;
+    background-attachment: fixed;
     margin: 0 auto;
     display: block;
 }
 
-.divsSaber{
-    border: 2px solid #1f1bff;
-    margin: 10px 900px 10px 10px;
-    padding: 5px 30px;
+#divGeneral{
+    margin: auto;
+    margin-top:50px;
+    width: 900px;
+    height: 1200px;
+
+}
+#video {
+    float: right;
+    width:450px ;
+    height: 300px;
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+    border-radius:7%;
+}
+.divideaproyecto1{
+    width: 445px;
+    height:210px;
     text-align: left;
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+    border-radius:7%;
+}
+
+.ideaproyecto2{
+    width: 445px;
+    height:235px;
+    text-align: left;
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+    border-radius:7%;
+
+}
+.lista1{
+    font-size: 17px;
+}
+
+.ideaproyecto3{
+    width:435px ;
+    height:280px;
+    float: right;
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+    border-radius:7%;
+    margin: 10px
+}
+.ideaproyecto4{
+    width:390px ;
+    height:500px;
+    float: left;
+    background-image:url("Imagenes/elon-musk-spacex-tesla-lanzamiento-nasa-1.jpg");
+    border-radius:7%;
+    margin: 10px;
+}
+.boton3{
+
+    position: absolute;
+    top: 170%;
+    right: 25%;
+    width: 180px;
+    height: 50px;
+    background-size: cover;
+    border-radius: 7%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Times New Roman";
+    background: #917d3d;
+    cursor: pointer;
+}
+
+.boton3:hover{
+    transform: scale(.95);
 }
