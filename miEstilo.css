@@ -50,20 +50,32 @@ form{
     background: rgba(260, 260, 260, .2);
     box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
     width: 550px;
-    height: 280px;
+    height: 310px;
     padding: 5px;
     margin: 2%;
-    overflow: auto;
+    overflow: hidden;
 }
 .div2 h4{
     font-size: 25px;
 }
-
+.start{
+    width: 250px;
+    height: 210px;
+    float: right;
+    padding: 5px;
+    margin: 2%;
+    overflow: hidden;
+}
+.jugar{
+    width: 190px;
+    height: 110px;
+    float: right;
+    padding: 5px;
+    margin: 2%;
+    overflow: hidden;
+}
 .boton {
-    display: inline-flex;
-    position: absolute;
-    top: 60%;
-    left:80%;
+    position: relative;
     align-items: center;
     justify-content: center;
     width:170px;
@@ -85,12 +97,9 @@ form{
     transform: scale(.98);
 }
 .boton2{
-    display: inline-flex;
-    position: absolute;
+    position: relative;
     align-items: center;
     justify-content: center;
-    top: 100%;
-    right:55% ;
     height: 35px;
     width:130px;
     text-align: center;
@@ -186,9 +195,9 @@ footer{
     margin:5px;
 }
 .boton3{
-    position: absolute;
-    top: 140%;
-    right: 15%;
+    position: relative;
+    float: right;
+    top:20%;
     width: 180px;
     height: 50px;
     background-size: cover;
@@ -198,7 +207,25 @@ footer{
     font-size: 20px;
     font-family: "Roboto Light", serif;
     background: #a49b9a;
+    box-shadow: 0 5px 1px rgba(0,0,0,0.5);
 }
-
 .boton3:hover{
     transform: scale(.95);}
+
+.boton4{
+    position: relative;
+    float: right;
+    top:20%;
+    width: 180px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    border-radius: 7%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Roboto Light", serif;
+    background: #a49b9a;
+    box-shadow: 0 5px 1px rgba(0,0,0,0.5);
+}
