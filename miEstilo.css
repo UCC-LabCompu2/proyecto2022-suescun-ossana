@@ -1,84 +1,4 @@
 /*estilo por tag(se aplica a todos los selectores: */
-
-#Elon {
-    color: white;
-    font-family: "Britannic Bold";
-    background-image: url(Imagenes/header-logo-universo-estrellas.jpg);
-    background-repeat: repeat-x;
-    background-size: contain;
-    background-attachment: fixed;
-    text-shadow: 2px 2px #0B0B13FF;
-    margin: 5px;
-    padding: 1px;
-    text-align: left;
-    font-size: 20px;
-
-}
-form{
-    background: rgba(260,260,260,.2);
-    box-shadow: 0 15px 20px rgba(0,0,0,.2);
-    padding: 1px;
-    text-align: left;
-    font-size: 20px;
-}
-.div1{
-    background: rgba(260,260,260,.2);
-    box-shadow: 0 15px 20px rgba(0,0,0,.2);
-    padding: 1px;
-    text-align: left;
-    letter-spacing: 1px;
-}
-.div1 h4{
-    font-size: 15px;
-}
-
-.boton {
-    position: absolute;
-    top: 45%;
-    right: 10%;
-    width: 180px;
-    height: 180px;
-    background:url(Imagenes/62468028-icono-de-cohete-botón-de-internet-en-el-fondo-blanco--removebg-preview.png);
-    background-size: cover;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-}
-.boton:hover{
-    transform: scale(.95);
-}
-.boton2{
-    position: absolute;
-    top: 82%;
-    left:9%;
-    float:left;
-    height: 35px;
-    width:130px;
-    text-align: center;
-    font-family: "Times New Roman";
-    font-size: 20px;
-    color: #000000;
-    background: #917d3d;
-    border-radius:8%;
-    cursor: pointer;
-
-}
-.boton2:hover{
-    transform: scale(.95);
-}
-h6 {
-    color: blue;
-}
-
-ul{
-    color: #020101;
-    font-family: Arial, serif;
-}
-footer{
-    color: #030303; font-family:"Kanit";text-align: left;align-items: end;
-    font-size: 15px;
-}
-
 body{
     background-image:url("Imagenes/marr_spacx2.jpg");
     background-size:cover;
@@ -90,7 +10,118 @@ body{
     background-attachment: fixed;
 }
 
+#Elon {
+    color: white;
+    font-family: "Roboto Light", serif;
+    background-image: url(Imagenes/1.jpg);
+    width: 1350px;
+    height: 120px;
+    background-size: auto;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    text-shadow: 2px 2px #0B0B13FF;
+    margin:-11px;
+    padding: 1px;
+    text-align: left;
+    font-size: 30px;
+}
+form{
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.2);
+    padding: 1px;
+    text-align: left;
+    font-size: 20px;
+    margin: 1%;
+    float: right;
+}
+.div1{
+    background: rgba(260, 260, 260, .2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+    width: 550px;
+    height: 180px;
+    padding: 5px;
+    margin: 2%;
+    overflow: auto;
+}
+.div1 h4{
+    font-size: 25px;
+}
+.div2 {
+    background: rgba(260, 260, 260, .2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+    width: 550px;
+    height: 280px;
+    padding: 5px;
+    margin: 2%;
+    overflow: auto;
+}
+.div2 h4{
+    font-size: 25px;
+}
+
+.boton {
+    display: inline-flex;
+    position: absolute;
+    top: 60%;
+    left:80%;
+    align-items: center;
+    justify-content: center;
+    width:170px;
+    height: 170px;
+    background: rgba(250, 6, 6, 0.65);
+    color:white;
+    font-family: "Roboto Light", serif;
+    font-size: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: rgba(26, 24, 24, 0.87);
+    border-radius: 50%;
+    box-shadow: 0 15px 1px rgba(0,0,0,0.5);
+
+}
+.boton:hover{
+    box-shadow: 0 15px 1px rgba(0,0,0,0.5) ;
+    transform: scale(.98);
+}
+.boton2{
+    display: inline-flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 40%;
+    right:55% ;
+    height: 35px;
+    width:130px;
+    text-align: center;
+    font-family: "Roboto Light", serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #000000;
+    background: #a49b9a;
+    border: rgba(26, 24, 24, 0.87);
+    border-radius:8%;
+    box-shadow: 0 5px 1px rgba(0,0,0,0.5);
+    cursor: pointer;
+    margin: 2%;
+}
+.boton2:hover{
+    transform: scale(.95);
+}
+
+ul{
+    color: #020101;
+    font-family: "Roboto Light", serif;
+}
+footer{
+    color: #030303; font-family:"Roboto Light", serif;text-align: left;align-items: end;
+    font-size: 15px;
+    float: right;
+    margin: 10px;
+}
 #myCanvas{
+<<<<<<< HEAD
     background: white;
     background-attachment: fixed;
         margin: 0 auto;
@@ -167,6 +198,86 @@ body{
         background: #917d3d;
         cursor: pointer;
     }
+=======
+    background: white fixed;
+    margin: 0 auto;
+    display: block;
+}
+
+#divGeneral{
+    margin: 50px auto auto;
+    width: 900px;
+    height: 1200px;
+
+}
+#video {
+    float: right;
+    width:450px ;
+    height: 300px;
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+    border-radius:7%;
+    margin: -20px;
+}
+.divideaproyecto1{
+    width: 445px;
+    height:210px;
+    text-align: left;
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+    border-radius:7%;
+    padding: 8px;
+    margin:5px;
+}
+
+.ideaproyecto2{
+    width: 445px;
+    height:235px;
+    text-align: left;
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+    border-radius:7%;
+    padding: 8px;
+    margin:5px;
+}
+.lista1{
+    font-size: 17px;
+}
+
+.ideaproyecto3{
+    width:435px ;
+    height:280px;
+    float: right;
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+    border-radius:7%;
+    padding: 8px;
+    margin: -25px;
+}
+.ideaproyecto4{
+    width:390px ;
+    height:500px;
+    float: left;
+    background-image:url("Imagenes/elon-musk-spacex-tesla-lanzamiento-nasa-1.jpg");
+    border-radius:7%;
+    padding: 8px;
+    margin:5px;
+}
+.boton3{
+    position: absolute;
+    top: 140%;
+    right: 15%;
+    width: 180px;
+    height: 50px;
+    background-size: cover;
+    border-radius: 7%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Roboto Light", serif;
+    background: #a49b9a;
+}
+>>>>>>> ebd36533a11c0c5eb37085fc50eb3e4b1e473d0b
 
     .boton3:hover{
         transform: scale(.95);
