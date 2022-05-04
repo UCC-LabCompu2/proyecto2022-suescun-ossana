@@ -7,7 +7,8 @@ Esta pagina corresponde a un juego basado en pilotear un cohete espacial e ir es
 
 ##
 link de gh-pages
-http://localhost:63342/proyecto2022-suescun-ossana/index.html
+*http://localhost:63342/proyecto2022-suescun-ossana/index.html?_ijt=voakrn5u2ees0c93d2ijv0cfg8&_ij_reload=RELOAD_ON_SAVE
+
 ##tecnologias usadas
 *HTML5
 *CCS3
