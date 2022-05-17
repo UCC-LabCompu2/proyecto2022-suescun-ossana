@@ -24,26 +24,26 @@ body{
     text-align: left;
     font-size: 30px;
 }
-form{
+.nombreusuario {
     background: rgba(260,260,260,.2);
     box-shadow: 0 15px 20px rgba(0,0,0,.2);
+    width: 35%;
     padding: 1px;
     text-align: left;
     font-size: 20px;
-    margin: 1%;
+
     float: right;
 }
 .contenedor{
-    width:100%;
+    width:98%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin:  auto;
 
 }
 .div1{
     background: rgba(260, 260, 260, .2);
     box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
-    width: 40%;
-
+    width: 45%;
     padding: 5px;
     margin: 2%;
     overflow: auto;
@@ -54,8 +54,7 @@ form{
 .div2 {
     background: rgba(260, 260, 260, .2);
     box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
-    width: 550px;
-    height: 310px;
+    width: 45%;
     padding: 5px;
     margin: 2%;
     overflow: hidden;
@@ -64,8 +63,10 @@ form{
     font-size: 25px;
 }
 .start{
-    width: 250px;
-    height: 210px;
+    background: rgba(260, 260, 260, .2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+    width: 230px;
+    height: 190px;
     float: right;
     padding: 5px;
     margin: 2%;
@@ -83,8 +84,8 @@ form{
     position: relative;
     align-items: center;
     justify-content: center;
-    width:170px;
-    height: 170px;
+    width:70%;
+    height: 80%;
     background: rgba(250, 6, 6, 0.65);
     color:white;
     font-family: "Roboto Light", serif;
@@ -244,10 +245,64 @@ footer{
 
     .div1{
 
-        width: 100%;
+        width: 95%;
         height: 100%;
         background: rgba(260, 260, 260, .2);
         box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+        border-radius: 5%;
+
+    }
+    .div2 {
+        background: rgba(260, 260, 260, .2);
+        box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+        width: 95%;
+        padding: 5px;
+        margin: 2%;
+        border-radius: 5%;
+        overflow: hidden;
+    }
+    .nombreusuario {
+        background: rgba(260,260,260,.2);
+        width: 80%;
+        height: 100%;
+        padding: 1px;
+        text-align: left;
+        font-size: 20px;
+        margin: 20px 10px 10px 1px;
+        float:left;
+    }
+    .contenedor{
+        width:100%;
+        max-width: 450px;
+        margin: 0 auto;
+
+}
+    .boton {
+        position: relative;
+        left: 30%;
+        align-items: center;
+        justify-content: center;
+        width:170px;
+        height: 70px;
+        background: rgba(250, 6, 6, 0.65);
+        color:white;
+        font-family: "Roboto Light", serif;
+        font-size: 50px;
+        font-weight: 500;
+        cursor: pointer;
+        text-transform: uppercase;
+        border: rgba(26, 24, 24, 0.87);
+        border-radius: 15%;
+        box-shadow: 0 15px 1px rgba(0,0,0,0.5);
+
+    }
+    .start{
+
+        width: 100%;
+        height: 40%;
+        padding: 2px;
+        margin: 2%;
+        overflow: hidden;
 
     }
 }
