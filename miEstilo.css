@@ -63,8 +63,7 @@ body{
     font-size: 25px;
 }
 .start{
-    background: rgba(260, 260, 260, .2);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+
     width: 230px;
     height: 190px;
     float: right;
@@ -142,22 +141,27 @@ footer{
 }
 
 #divGeneral{
+    width:80%;
+    max-width: 1200px;
+
     margin: 50px auto auto;
-    width: 900px;
     height: 1200px;
 
 }
-#video {
+.video-responsive {
     float: right;
-    width:450px ;
-    height: 300px;
-    background: rgba(260,260,260,.2);
-    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+    width:50% ;
+    height: 30%;
+
     border-radius:7%;
     margin: -20px;
 }
+
+
+
+
 .divideaproyecto1{
-    width: 445px;
+    width: 47%;
     height:210px;
     text-align: left;
     background: rgba(260,260,260,.2);
@@ -168,22 +172,22 @@ footer{
 }
 
 .ideaproyecto2{
-    width: 445px;
-    height:235px;
+   width:47%;
+    height:330px;
     text-align: left;
     background: rgba(260,260,260,.2);
     box-shadow: 0 15px 20px rgba(0,0,0,.4);
     border-radius:7%;
     padding: 8px;
-    margin:5px;
+    margin:1px;
 }
 .lista1{
     font-size: 17px;
 }
 
 .ideaproyecto3{
-    width:435px ;
-    height:280px;
+width: 47%;
+   height: 47%;
     float: right;
     background: rgba(260,260,260,.2);
     box-shadow: 0 15px 20px rgba(0,0,0,.4);
@@ -191,8 +195,8 @@ footer{
     padding: 8px;
     margin: -25px;
 }
-.ideaproyecto4{
-    width:390px ;
+.ideaproyecto40{
+    width: 47%;
     height:500px;
     float: left;
     background-image:url("Imagenes/elon-musk-spacex-tesla-lanzamiento-nasa-1.jpg");
@@ -200,6 +204,15 @@ footer{
     padding: 8px;
     margin:5px;
 }
+.ideaproyecto4{ width: 47%;
+height:500px;
+float: left;
+background-image:url("Imagenes/elon-musk-spacex-tesla-lanzamiento-nasa-1.jpg");
+border-radius:7%;
+padding: 8px;
+margin:5px;}
+
+
 .boton3{
     position: relative;
     float: right;
@@ -239,9 +252,7 @@ footer{
 @media screen and (max-width: 600px){
 
 
-    body{
-        background-image: url("Imagenes/universo_estrellas.jpg");
-    }
+
 
     .div1{
 
@@ -305,4 +316,83 @@ footer{
         overflow: hidden;
 
     }
+}
+
+@media screen and (max-width: 750px){
+
+    #divGeneral{
+        width:80%;
+        max-width: 1200px;
+
+        margin: 50px auto auto;
+        height: 1200px;
+
+    }
+    .divideaproyecto1 {
+
+        width: 100%;
+        height:15%;
+        text-align:center;
+
+        ;
+
+    }
+
+    .ideaproyecto2{
+        width:100%;
+        height:45%;
+        text-align: center;
+
+        padding: 8px;
+        margin:1px;
+
+    }
+    .ideaproyecto3{
+        
+        position: relative;
+        top:8%;
+        width: 100%;
+        height: 50%;
+        float:none;
+        background: rgba(260,260,260,.2);
+        box-shadow: 0 15px 20px rgba(0,0,0,.4);
+        border-radius:7%;
+        padding: 8px;
+        margin: 2%;
+    }
+    /* Start: Video Responsive */
+    .video-responsive2 {
+        overflow:hidden;
+        padding-bottom:55%; /* Adecua este valor para controlar la altura del video */
+        position:relative;
+        top:5%;
+        left:  3%;
+        height:0;
+        width:95% ;
+        border-radius:7%;
+
+    }
+    .video-responsive2 iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+    .video-responsive{
+        display:none;
+    }
+
+   .ideaproyecto40{
+    display: none;
+}
+
+}
+@media screen and (min-width: 750px){
+    .video-responsive2{
+        display:none;
+    }
+.ideaproyecto4{
+    display: none;
+}
 }
