@@ -135,6 +135,8 @@ footer{
     margin: 10px;
 }
 #myCanvas{
+    width: 90%;
+    height: 700px;
     background: white fixed;
     margin: 0 auto;
     display: block;
@@ -162,7 +164,7 @@ footer{
 
 .divideaproyecto1{
     width: 47%;
-    height:210px;
+    height:218px;
     text-align: left;
     background: rgba(260,260,260,.2);
     box-shadow: 0 15px 20px rgba(0,0,0,.4);
@@ -173,7 +175,7 @@ footer{
 
 .ideaproyecto2{
    width:47%;
-    height:330px;
+    height:345px;
     text-align: left;
     background: rgba(260,260,260,.2);
     box-shadow: 0 15px 20px rgba(0,0,0,.4);
@@ -204,9 +206,10 @@ width: 47%;
     padding: 8px;
     margin:5px;
 }
-.ideaproyecto4{ width: 47%;
-height:500px;
-float: left;
+.ideaproyecto4{
+    width: 95%;
+    height: 290px;
+position: center;
 background-image:url("Imagenes/elon-musk-spacex-tesla-lanzamiento-nasa-1.jpg");
 border-radius:7%;
 padding: 8px;
@@ -216,7 +219,7 @@ margin:5px;}
 .boton3{
     position: relative;
     float: right;
-    top:20%;
+    top:15%;
     width: 180px;
     height: 50px;
     background-size: cover;
@@ -331,7 +334,7 @@ margin:5px;}
     .divideaproyecto1 {
 
         width: 100%;
-        height:15%;
+        height:17%;
         text-align:center;
 
         ;
@@ -340,7 +343,7 @@ margin:5px;}
 
     .ideaproyecto2{
         width:100%;
-        height:45%;
+        height:48%;
         text-align: center;
 
         padding: 8px;
@@ -350,9 +353,9 @@ margin:5px;}
     .ideaproyecto3{
         
         position: relative;
-        top:8%;
+        top:2%;
         width: 100%;
-        height: 50%;
+        height: 60%;
         float:none;
         background: rgba(260,260,260,.2);
         box-shadow: 0 15px 20px rgba(0,0,0,.4);
@@ -386,7 +389,24 @@ margin:5px;}
    .ideaproyecto40{
     display: none;
 }
-
+    .boton3{
+        position: relative;
+        float: right;
+        top:5%;
+        right: 7%;
+        width: 180px;
+        height: 50px;
+        background-size: cover;
+        border-radius: 8%;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        font-family: "Roboto Light", serif;
+        background: #a49b9a;
+        box-shadow: 0 5px 1px rgba(0,0,0,0.5);
+    }
+    .boton3:hover{
+        transform: scale(.95);}
 }
 @media screen and (min-width: 750px){
     .video-responsive2{
