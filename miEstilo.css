@@ -336,24 +336,27 @@ margin:5px;}
         width: 100%;
         height:17%;
         text-align:center;
+        margin:5% 0% 5% 0%;
 
-        ;
+
+    ;
 
     }
 
     .ideaproyecto2{
         width:100%;
         height:48%;
+
         text-align: center;
 
         padding: 8px;
-        margin:1px;
+        margin:5% 0% 5% 0%;
 
     }
     .ideaproyecto3{
         
         position: relative;
-        top:2%;
+
         width: 100%;
         height: 60%;
         float:none;
@@ -361,7 +364,8 @@ margin:5px;}
         box-shadow: 0 15px 20px rgba(0,0,0,.4);
         border-radius:7%;
         padding: 8px;
-        margin: 2%;
+        margin:5% 0% 5% 0%;
+
     }
     /* Start: Video Responsive */
     .video-responsive2 {
