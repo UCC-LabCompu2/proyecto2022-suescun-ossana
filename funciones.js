@@ -118,10 +118,6 @@ function dibujar() {
                 obstaculo2[j].x2--;
                 obstaculo2[j].y2++;
 
-                // colision
-                if (cx + cohete.anchoCohete === obstaculo[i].x && cy+cohete.altoCohete  === obstaculo[i].y) {
-                    alert("colision");
-                }
 
                 if (obstaculo[i].x === 300) {
                     obstaculo.push({
