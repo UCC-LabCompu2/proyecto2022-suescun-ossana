@@ -123,7 +123,7 @@ function dibujar() {
                     alert("colision");
                 }
 
-                if (obstaculo[i].x == 300) {
+                if (obstaculo[i].x === 300) {
                     obstaculo.push({
                         x: canvas.width,
                         y: (Math.random() * avion747derecha.height) - avion747derecha.height,
@@ -150,5 +150,3 @@ function dibujar() {
 
 }
     dibujar();
-
-
