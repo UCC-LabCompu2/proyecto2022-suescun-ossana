@@ -7,7 +7,7 @@ var imagenCohete = new Image();
 imagenCohete.src ="Imagenes/Cohetejuegofff.png "
 
 var imamgenFondo = new Image();
-imamgenFondo.src= "Imagenes/fondo2.png"
+imamgenFondo.src= "Imagenes/nubes.jpg"
 
 var avion747derecha= new Image();
 avion747derecha.src= "Imagenes/aviondere.png"
