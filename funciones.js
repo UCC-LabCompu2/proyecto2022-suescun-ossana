@@ -26,7 +26,7 @@ pasto.src= "Imagenes/pasto.png"
 //objeto cohete
   var cohete= {
        altoCohete:140,
-      anchoCohete: 50,
+      anchoCohete: 30,
 
 };
 
@@ -34,7 +34,7 @@ pasto.src= "Imagenes/pasto.png"
 // algunas variables
 var cx = (canvas.width-cohete.anchoCohete)/2;
 var cy = (canvas.height+cohete.altoCohete)/2;
-var dy=2;
+//var dy=2;
 
 
 var derPresionado= false;
@@ -62,18 +62,6 @@ function keyUpHandler (e) {
 }
 
 
-var obstaculo=[]
-
-  obstaculo[0] ={
-        x:canvas.width,
-        y:2,
-};
-var obstaculo2=[]
-
-obstaculo2[0]={
-    x2:canvas.width,
-    y2: 2,
-}
 
 
 var gamespeed=  -2;
@@ -93,6 +81,39 @@ function fondo(){
 
 }
 
+var i = 0
+var obstaculo=[i];
+
+   obstaculo[i] ={
+      x:canvas.width,
+      y:2,
+};
+
+var avion747={
+    ancho:250,
+    alto: 87,
+    posx:canvas.width,
+    posy:2,
+
+}
+
+var puntaje ={
+    puntos: 0,
+    mostrar: function (){
+        ctx.font ="16px Arial black";
+        ctx.fillStyle = "#070715"
+        ctx.fillText("Score:"+this.puntos,8,20);
+    }
+}
+
+
+//var obstaculo2=[];
+//obstaculo2[0]={
+  //  x2:canvas.width,
+    //y2: 2,
+//}
+
+var posi= canvas.width;
 
 function dibujar() {
 
@@ -101,37 +122,42 @@ function dibujar() {
 
 
         for (var i = 0; i < obstaculo.length; i++) {
-         for    (var j = 0; j < obstaculo2.length; j++)
-            {
+        // for    (var j = 0; j < obstaculo2.length; j++)
 
 
-                ctx.drawImage(avion747derecha, obstaculo[i].x, obstaculo[i].y);
-                ctx.drawImage(f16derecha, obstaculo[i].x, obstaculo[i].y+dy);
-
-                dy = dy + 1
 
 
-                ctx.drawImage(nubetor, obstaculo[i].x, 180)
+                ctx.drawImage(avion747derecha, avion747.posx , avion747.posy );
+                //ctx.drawImage(f16derecha, obstaculo[i].x, obstaculo[i].y+dy);
 
-                obstaculo[i].x--;
-                obstaculo[i].y++;
-                obstaculo2[j].x2--;
-                obstaculo2[j].y2++;
+              //  dy = dy - gamespeed
 
 
-                if (obstaculo[i].x === 300) {
-                    obstaculo.push({
-                        x: canvas.width,
-                        y: (Math.random() * avion747derecha.height) - avion747derecha.height,
-                    })
+                // ctx.drawImage(nubetor, obstaculo[i].x, 180)
+                 posi= posi - 100;
+                 avion747.posx=avion747.posx-3;
+            avion747.posy= avion747.posy +2;
+                obstaculo[i].x = obstaculo[i].x - 2.5;
+                obstaculo[i].y = obstaculo[i].y - gamespeed;
+               // obstaculo2[j].x2--;
+                //obstaculo2[j].y2++;
+
+
+                if (avion747.posx <= 50 - avion747.alto) {
+
+
+                        avion747.posx = canvas.width;
+                        avion747.posy= (Math.random() * avion747derecha.height);
+                      // avion747.posy =  (Math.random() * avion747derecha.height);
+
                 }
             }
-          }
+
 
 
 
         if (cy > (canvas.height / 2 - 70)) {
-            cy -= 1;
+            cy -= 0.8;
         }
 
         if (derPresionado && cx < canvas.width - cohete.anchoCohete) {
@@ -141,7 +167,13 @@ function dibujar() {
 
         }
 
+        if (cx+ (cohete.anchoCohete/2) > avion747.posx && cx + (cohete.anchoCohete/2) <avion747.posx + avion747.ancho && cy+(cohete.altoCohete/2)> avion747.posy && cy+(cohete.altoCohete/2)<avion747.posy +avion747.alto) {
+             alert("Choque, No compliste el objetivo");
+             document.location.reload();
 
+        }
+
+         puntaje.mostrar();
         requestAnimationFrame(dibujar);
 
 }
