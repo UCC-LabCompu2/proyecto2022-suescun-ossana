@@ -28,9 +28,9 @@ Estructura de Proyecto Lab de Compu II - 2022
 - [x]La página principal debe llamarse index
 - [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
 - [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
-- [ ] Se debe emplear algún favicon
+- [ x] Se debe emplear algún favicon
 - [x] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
-- [ ] Debe haber navegación entre todas las páginas
+- [x ] Debe haber navegación entre todas las páginas
 
 ### Sobre el HTML
 - [x] Todas las etiquetas deben estar en minúscula
@@ -69,7 +69,7 @@ Estructura de Proyecto Lab de Compu II - 2022
 ## Requisitos del Segundo Parcial
 
 ### Sobre el proyecto general
-- [ ] Todas las correcciones y mejoras solicitadas durante el primer parcial deben estar corregidas.
+- [x ] Todas las correcciones y mejoras solicitadas durante el primer parcial deben estar corregidas.
 - [ ] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
 - [ ] No debe haber errores JavaScripts presentes. (ver con F12 si hay errores)
 
@@ -77,7 +77,7 @@ Estructura de Proyecto Lab de Compu II - 2022
 Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
 - [ ] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert, y que blanquee el contenido del campo.
 - [ ] Una función que calcule algo en base a los valores ingresados por el usuario en los inputs.
-- [ ] Una función que realice un dibujo sobre un canvas (debe ser representativo y acorde a los valores ingreados).
+- [ x] Una función que realice un dibujo sobre un canvas (debe ser representativo y acorde a los valores ingreados).
 
 ### Sobre la documentación
 - [ ] TODAS las funciones javaScript deben estar comentadas adecuadamente. [JsDoc](https://jsdoc.app/about-getting-started.html)
@@ -101,5 +101,5 @@ Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
 - [ ] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
 - [ ] No debe haber errores JavaScript presentes (F12 > Consola)
 - [ ] Debe cumplir con TODOS los requisitos del 1er y 2do Parcial (si se agrego código nuevo en Js, se debe documentar, si hay nuevos inputs de html deben contener su label, etc)
-- [ ] El Canvas debe poseer animación con setInterval() o requestAnimationFrame()
+- [ x] El Canvas debe poseer animación con setInterval() o requestAnimationFrame()
 - [ ] El cálculo del ejercicio de física/etc debe ser el correcto, independientemente de los valores ingresados.
