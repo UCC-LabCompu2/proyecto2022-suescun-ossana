@@ -7,13 +7,17 @@ var imagenCohete = new Image();
 imagenCohete.src = "Imagenes/cohete2.png "
 
 var imamgenFondo = new Image();
-imamgenFondo.src = "Imagenes/nubes.jpg"
+imamgenFondo.src = "Imagenes/nubes22.jpg"
 
 var avion747derecha = new Image();
 avion747derecha.src = "Imagenes/aviondere.png"
 
 var f16derecha = new Image();
 f16derecha.src = "Imagenes/f16derecha.png"
+
+var f16izquierda = new Image();
+f16izquierda.src = "Imagenes/f16izquierda.png"
+
 
 var nubetor = new Image();
 nubetor.src = "Imagenes/nube.png"
@@ -109,6 +113,7 @@ obstaculo[i] = {
     y: 2,
 };
 
+
 var avion747 = {
     ancho: 250,
     alto: 87,
@@ -116,9 +121,16 @@ var avion747 = {
     posy: 2,
 
 }
+var avionf16={
+    ancho: 153,
+    alto: 88,
+    posx: canvas.width,
+    posy: 15
+}
 
 function detectarcolision() {
-    if (cx + (cohete.anchoCohete / 2) > avion747.posx && cx + (cohete.anchoCohete / 2) < avion747.posx + avion747.ancho && cy + (cohete.altoCohete / 2) > avion747.posy && cy + (cohete.altoCohete / 2) < avion747.posy + avion747.alto) {
+    if (cx + (cohete.anchoCohete / 2) > avion747.posx && cx + (cohete.anchoCohete / 2) < avion747.posx + avion747.ancho && cy + (cohete.altoCohete / 2) > avion747.posy && cy + (cohete.altoCohete / 2) < avion747.posy + avion747.alto ||
+        cx + (cohete.anchoCohete / 2) > avionf16.posx && cx + (cohete.anchoCohete / 2) < avionf16.posx + avionf16.ancho && cy + (cohete.altoCohete / 2) > avionf16.posy && cy + (cohete.altoCohete / 2) < avionf16.posy + avionf16.alto ) {
         estado = true
         if (estado === true) {
             alerta = true
@@ -169,25 +181,31 @@ function dibujar() {
 
 
         ctx.drawImage(avion747derecha, avion747.posx, avion747.posy);
-        //ctx.drawImage(f16derecha, obstaculo[i].x, obstaculo[i].y+dy);
+        ctx.drawImage(f16derecha, avionf16.posx, avionf16.posy);
 
 
         // ctx.drawImage(nubetor, obstaculo[i].x, 180)
 
         avion747.posx = avion747.posx - 3;
         avion747.posy = avion747.posy + 2;
+
+        avionf16.posx= avionf16.posx-2;
+        avionf16.posy= avionf16.posy+2;
+
         obstaculo[i].x = obstaculo[i].x - 2.5;
         obstaculo[i].y = obstaculo[i].y - gamespeed;
         // obstaculo2[j].x2--;
         //obstaculo2[j].y2++;
 
 
-        if (avion747.posx <= 50 - avion747.alto) {
-
+        if (avion747.posx <= 50 - avion747.ancho) {
             avion747.posx = canvas.width;
-            avion747.posy = (Math.random() * avion747derecha.height);
+            avion747.posy = (Math.random() * avion747derecha.height*Math.random());
             // avion747.posy =  (Math.random() * avion747derecha.height);
-
+        }
+        if (avionf16.posx<-100-avionf16.ancho || avionf16.posy>600){
+            avionf16.posx= canvas.width
+            avionf16.posy= (Math.random() * avionf16.posy*Math.random());
         }
     }
 
