@@ -4,7 +4,7 @@ var ctx = canvas.getContext("2d")
 
 // cargar imagenes
 var imagenCohete = new Image();
-imagenCohete.src = "Imagenes/Cohetejuegofff.png "
+imagenCohete.src = "Imagenes/aviondere.png "
 
 var imamgenFondo = new Image();
 imamgenFondo.src = "Imagenes/nubes.jpg"
@@ -29,22 +29,19 @@ var cohete = {
 
 };
 
-
 // algunas variables
 var cx = (canvas.width - cohete.anchoCohete) / 2;
 var cy = (canvas.height + cohete.altoCohete) / 2;
-var estado = false ;
-var alerta =false;
-//var dy=2;
-
-
+var estado = false;
+var alerta = false;
 var derPresionado = false;
 var izqpresionado = false;
 
-//cuando la tecla esta presionada
 
+//cuando la tecla esta presionada
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+
 
 function keyDownHandler(e) {
     if (e.keyCode === 39) {
@@ -52,21 +49,44 @@ function keyDownHandler(e) {
     } else if (e.keyCode === 37) {
         izqpresionado = true;
     }
+
 }
 
 function keyUpHandler(e) {
-    if (e.keyCode === 39) {
+    if (e.keyCode === 39 || e.keyCode === 32) {
         derPresionado = false;
+        spacepresionado = false;
     } else if (e.keyCode === 37) {
         izqpresionado = false;
     }
 }
+
+//funcion para mover el cohete a los lados
+function movercohete() {
+    if (cy > (canvas.height / 2 - 70)) {
+        cy -= 0.8;
+    }
+    if (derPresionado && cx < canvas.width - cohete.anchoCohete) {
+        cx += 5;
+    } else if (izqpresionado && cx > 7) {
+        cx -= 5;
+    }
+}
+
+var bandera;
+canvas.onmousedown = function () {
+    bandera = true
+};
+canvas.onmouseup = function () {
+    bandera = false
+};
 
 
 var gamespeed = -2;
 var fy = 0;
 var f2 = 600;
 
+//funcion para el movimiento del fondo
 function fondo() {
     ctx.drawImage(imamgenFondo, 0, fy);
     ctx.drawImage(imamgenFondo, 0, f2);
@@ -99,36 +119,29 @@ var avion747 = {
 
 function detectarcolision() {
     if (cx + (cohete.anchoCohete / 2) > avion747.posx && cx + (cohete.anchoCohete / 2) < avion747.posx + avion747.ancho && cy + (cohete.altoCohete / 2) > avion747.posy && cy + (cohete.altoCohete / 2) < avion747.posy + avion747.alto) {
-        estado=true
-        if (estado===true) {
-            ctx.drawImage(nubetor, canvas.height/2, canvas.width/2)
-            alerta=true
-        }
-        if(alerta===true){
-         ctx.fillRect((canvas.width/2)-250,(canvas.height/2)-250, 500, 500);
-         ctx.fill();
-            ctx.font = "60px Arial black" ;
+        estado = true
+        if (estado === true) {
+            alerta = true
+
+
+            ctx.fillRect((canvas.width / 2) - 250, (canvas.height / 2) - 250, 500, 500);
+            ctx.fill();
+            ctx.font = "60px Arial black";
             ctx.fillStyle = "#dc1a1a"
-            ctx.fillText("GAME OVER" ,(canvas.width/2)-200 , (canvas.height/2)-170);
-            ctx.font = "20px Arial black" ;
+            ctx.fillText("GAME OVER", (canvas.width / 2) - 200, (canvas.height / 2) - 170);
+            ctx.font = "20px Arial black";
             ctx.fillStyle = "#ffffff"
-            ctx.fillText("Final Score: "+this.puntajeF ,(canvas.width/2)-200 , (canvas.height/2)-140);
+            ctx.fillText("Final Score: " + this.puntajeF, (canvas.width / 2) - 190, (canvas.height / 2) - 140);
+
+            if (bandera === true) {
+                document.location.reload();
             }
-
-
+        }
 
 
     }
-    }
-
-
-function puntajefinal() {
-
-    ctx.font = "16px Arial black";
-    ctx.fillStyle = "#070715"
-    ctx.fillText("Score:" + this.puntajeF, 100, 200);
-
 }
+
 
 var puntaje = {
     puntos: 0,
@@ -137,28 +150,20 @@ var puntaje = {
         ctx.fillStyle = "#070715"
         ctx.fillText("Score:" + this.puntos, 8, 20);
 
-        }
+    }
 
 
 }
 
-
-//var obstaculo2=[];
-//obstaculo2[0]={
-//  x2:canvas.width,
-//y2: 2,
-//}
-var puntajeF = puntaje.puntos;
-var posi = canvas.width;
 
 function dibujar() {
 
     fondo();
     ctx.drawImage(imagenCohete, cx, cy);
 
-
     for (var i = 0; i < obstaculo.length; i++) {
-        // for    (var j = 0; j < obstaculo2.length; j++)
+
+
         puntaje.puntos = puntaje.puntos + 1;
         puntajeF = puntaje.puntos
 
@@ -166,11 +171,9 @@ function dibujar() {
         ctx.drawImage(avion747derecha, avion747.posx, avion747.posy);
         //ctx.drawImage(f16derecha, obstaculo[i].x, obstaculo[i].y+dy);
 
-        //  dy = dy - gamespeed
-
 
         // ctx.drawImage(nubetor, obstaculo[i].x, 180)
-        posi = posi - 100;
+
         avion747.posx = avion747.posx - 3;
         avion747.posy = avion747.posy + 2;
         obstaculo[i].x = obstaculo[i].x - 2.5;
@@ -181,7 +184,6 @@ function dibujar() {
 
         if (avion747.posx <= 50 - avion747.alto) {
 
-
             avion747.posx = canvas.width;
             avion747.posy = (Math.random() * avion747derecha.height);
             // avion747.posy =  (Math.random() * avion747derecha.height);
@@ -190,23 +192,14 @@ function dibujar() {
     }
 
 
-    if (cy > (canvas.height / 2 - 70)) {
-        cy -= 0.8;
-    }
-
-    if (derPresionado && cx < canvas.width - cohete.anchoCohete) {
-        cx += 5;
-    } else if (izqpresionado && cx > 7) {
-        cx -= 5;
-
-    }
-
-
-        puntajefinal();
+    movercohete()
     detectarcolision()
     puntaje.mostrar();
 
-    requestAnimationFrame(dibujar)
+    animacion = window.requestAnimationFrame(dibujar)
+    if (alerta === true) {
+        window.cancelAnimationFrame(animacion);
+    }
 }
 
 dibujar()
