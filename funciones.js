@@ -4,7 +4,7 @@ var ctx = canvas.getContext("2d")
 
 // cargar imagenes
 var imagenCohete = new Image();
-imagenCohete.src = "Imagenes/cohetejuego.png "
+imagenCohete.src = "Imagenes/cohete2.png "
 
 var imamgenFondo = new Image();
 imamgenFondo.src = "Imagenes/nubes.jpg"
