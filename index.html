@@ -12,6 +12,7 @@
     <link rel="stylesheet " href="miEstilo.css" type="text/css">
     <link rel="shortcut icon" href="Imagenes/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="funciones.js"></script>
 </head>
 
 <body>
@@ -27,9 +28,9 @@
     <main>
         <div class="nombreusuario">
             <form>
-                <label for="usuario"></label>Nombre del jugador: <input type="text" name="usuario"
+                <label for="nombre"></label>Nombre del jugador: <input type="text" name="nombre"
                                                                        placeholder="Nombre del jugador"
-                                                                       maxlength="10" id="usuario">
+                                                                       maxlength="8" id="nombre">
             </form>
         </div>
 
@@ -43,9 +44,9 @@
             </ul>
         </div>
         <div class="start">
-            <a href="jugar.html" style="text-decoration: none">
-                <button class="boton"><span>START</span></button>
-            </a>
+
+                <button  class="boton" onclick="cargarNombre()"> START </button>
+
         </div>
         <div class="div2">
             <h4> Instruciones del juego</h4>

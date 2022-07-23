@@ -1,3 +1,20 @@
+
+
+function cargarNombre() {
+    let nombre, url;
+    nombre = document.getElementById("nombre").value;
+    url = "jugar.html"
+    if (nombre === "") {
+        alert("El nombre no puede estar vacío, ingrese un nombre válido.");
+    } else {
+        window.open(url + "#" + nombre, "_self");
+    }
+}
+
+jugador=document.getElementById("nombre").value= window.location.href.split("#")[1]
+
+
+
 //inicio de declaracion
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d")
@@ -73,20 +90,13 @@ function movercohete() {
     if (cy > (canvas.height / 2 - 70)) {
         cy -= 0.8;
     }
-    if (derPresionado && cx < canvas.width - cohete.anchoCohete) {
-        cx += 5;
+    if (derPresionado && cx < canvas.width - cohete.anchoCohete-20) {
+        cx += 5 +((gamespeed*-1)-2);
     } else if (izqpresionado && cx > 7) {
-        cx -= 5;
+        cx -=5 +((gamespeed*-1)-2);
     }
 }
 
-var bandera;
-canvas.onmousedown = function () {
-    bandera = true
-};
-canvas.onmouseup = function () {
-    bandera = false
-};
 
 
 var gamespeed = -2;
@@ -159,10 +169,13 @@ function detectarcolision() {
             ctx.fill();
             ctx.font = "60px Arial black";
             ctx.fillStyle = "#dc1a1a"
-            ctx.fillText("GAME OVER", (canvas.width / 2) - 200, (canvas.height / 2) - 170);
+            ctx.fillText("!GAME OVER", (canvas.width / 2) - 205, (canvas.height / 2) - 170);
+            ctx.font = "40px Arial black";
+            ctx.fillStyle = "#dc1a1a"
+            ctx.fillText(jugador +"!", (canvas.width / 2) - 100, (canvas.height / 2) - 130);
             ctx.font = "20px Arial black";
             ctx.fillStyle = "#ffffff"
-            ctx.fillText("Final Score: " + this.puntajeF, (canvas.width / 2) - 190, (canvas.height / 2) - 140);
+            ctx.fillText("Final Score: " + this.puntajeF, (canvas.width / 2) - 90, (canvas.height / 2) - 95);
 
             if (bandera === true) {
                 document.location.reload();
@@ -234,7 +247,7 @@ function dibujar() {
         // ctx.drawImage(nubetor, obstaculo[i].x, 180)
         //movimiento de los obstaculos
         avion747.posx = avion747.posx - ((gamespeed * -1));
-        avion747.posy = avion747.posy + ((gamespeed * -1)/2);
+        avion747.posy = avion747.posy + ((gamespeed * -1)/1.5);
 
         avionf16.posx = avionf16.posx - (gamespeed * -1);
         avionf16.posy = avionf16.posy  + ((gamespeed * -1)/1.5);
@@ -262,6 +275,8 @@ function dibujar() {
             satelite.posy = -150;
         }
     }
+
+
 
     dificultad()
     movercohete()
