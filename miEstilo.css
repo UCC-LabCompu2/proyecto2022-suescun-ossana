@@ -233,6 +233,21 @@ margin:5px;}
 .boton3:hover{
     transform: scale(.95);}
 
+
+#paginajugar1{
+    width: 75%;
+    height:75%;
+    text-align: justify;
+    background: rgba(260,260,260,.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+
+
+    padding-right: 0;
+    margin-left:10%;
+}
+
+
+
 .boton4{
     position: relative;
     float: right;
@@ -335,7 +350,7 @@ margin:5px;}
         width: 100%;
         height:25%;
         text-align:center;
-        margin:5% 0% 5% 0%;
+        margin:5% 0 5% 0;
 
     }
 
@@ -346,7 +361,7 @@ margin:5px;}
         text-align: center;
 
         padding: 8px;
-        margin:5% 0% 5% 0%;
+        margin:5% 0 5% 0;
 
     }
     .ideaproyecto3{
@@ -360,7 +375,7 @@ margin:5px;}
         box-shadow: 0 15px 20px rgba(0,0,0,.4);
         border-radius:7%;
         padding: 8px;
-        margin:5% 0% 5% 0%;
+        margin:5% 0 5% 0;
 
     }
     /* Start: Video Responsive */

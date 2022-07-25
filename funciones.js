@@ -38,12 +38,18 @@ f16izquierda.src = "Imagenes/f16izquierda.png"
 var satelitei = new Image();
 satelitei.src = "Imagenes/satelite.png"
 
-
 var nubetor = new Image();
 nubetor.src = "Imagenes/nube.png"
 
 var pasto = new Image();
 pasto.src = "Imagenes/pasto.png"
+
+var sonidocohete = new Audio();
+sonidocohete.src = "sonidos/cohete.mp3"
+
+
+var sonidoexplocion = new Audio();
+sonidoexplocion.src = "sonidos/explocion.mp3"
 
 
 //objeto cohete
@@ -161,6 +167,8 @@ function detectarcolision() {
     if (cx + (cohete.anchoCohete / 2) > avion747.posx && cx + (cohete.anchoCohete / 2) < avion747.posx + avion747.ancho && cy + (cohete.altoCohete / 2) > avion747.posy && cy + (cohete.altoCohete / 2) < avion747.posy + avion747.alto ||
         cx + (cohete.anchoCohete / 2) > avionf16.posx && cx + (cohete.anchoCohete / 2) < avionf16.posx + avionf16.ancho && cy + (cohete.altoCohete / 2) > avionf16.posy && cy + (cohete.altoCohete / 2) < avionf16.posy + avionf16.alto) {
         estado = true
+        sonidoexplocion.play();
+        sonidocohete.pause();
         if (estado === true) {
             alerta = true
 
@@ -177,9 +185,8 @@ function detectarcolision() {
             ctx.fillStyle = "#ffffff"
             ctx.fillText("Final Score: " + this.puntajeF, (canvas.width / 2) - 90, (canvas.height / 2) - 95);
 
-            if (bandera === true) {
-                document.location.reload();
-            }
+
+
         }
 
 
@@ -235,6 +242,8 @@ function dibujar() {
         //incremento del puntaje
         puntaje.puntos = puntaje.puntos + 1;
         puntajeF = puntaje.puntos
+        sonidocohete.play()
+        sonidocohete.loop
 
 
         //dibujo de los obstaculos que aparecen
