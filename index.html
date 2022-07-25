@@ -28,24 +28,23 @@
     <main>
         <div class="nombreusuario">
             <form>
-                <label for="nombre"></label>Nombre del jugador: <input type="text" name="nombre"
+                <label for="nombre"></label>Nombre del jugador: <input id="nombre" type="text" name="nombre"
                                                                        placeholder="Nombre del jugador"
-                                                                       maxlength="8" id="nombre">
+                                                                       maxlength="8"   >
             </form>
         </div>
 
 
         <div class="div1">
             <h4> Objetivos del juego:</h4>
-            <ul>
-                <li>Pilotea tu nave espacial esquivando diferntes obstaculos</li>
+            <ul><li>Pilotea tu nave espacial esquivando diferntes obstaculos</li>
                 <li>Sal de la atmosfera terrestre hacia lo desconocido</li>
                 <li>Ayuda a Elon a cumplir su sueño y llegar a Marte</li>
             </ul>
         </div>
         <div class="start">
 
-                <button  class="boton" onclick="cargarNombre()"> START </button>
+                <button  class="boton" onclick="soloLetras(event) "  > START </button>
 
         </div>
         <div class="div2">

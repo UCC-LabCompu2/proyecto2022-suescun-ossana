@@ -1,9 +1,8 @@
-
-
-function cargarNombre() {
+function soloLetras() {
     let nombre, url;
     nombre = document.getElementById("nombre").value;
     url = "jugar.html"
+    // MAYUSCULAS || minusculas
     if (nombre === "") {
         alert("El nombre no puede estar vacío, ingrese un nombre válido.");
     } else {
@@ -11,8 +10,7 @@ function cargarNombre() {
     }
 }
 
-jugador=document.getElementById("nombre").value= window.location.href.split("#")[1]
-
+jugador = window.location.href.split("#")[1]
 
 
 //inicio de declaracion
@@ -44,6 +42,11 @@ nubetor.src = "Imagenes/nube.png"
 var pasto = new Image();
 pasto.src = "Imagenes/pasto.png"
 
+/*
+var fuego = new Image();
+fuego.src = "Imagenes/fuego.fire2.gif"
+*/
+
 var sonidocohete = new Audio();
 sonidocohete.src = "sonidos/cohete.mp3"
 
@@ -54,7 +57,7 @@ sonidoexplocion.src = "sonidos/explocion.mp3"
 
 //objeto cohete
 var cohete = {
-    altoCohete: 140,
+    altoCohete: 145,
     anchoCohete: 30,
 
 };
@@ -64,6 +67,7 @@ var cx = (canvas.width - cohete.anchoCohete) / 2;
 var cy = (canvas.height + cohete.altoCohete) / 2;
 var estado = false;
 var alerta = false;
+var complicacion = false;
 var derPresionado = false;
 var izqpresionado = false;
 
@@ -96,16 +100,15 @@ function movercohete() {
     if (cy > (canvas.height / 2 - 70)) {
         cy -= 0.8;
     }
-    if (derPresionado && cx < canvas.width - cohete.anchoCohete-20) {
-        cx += 5 +((gamespeed*-1)-2);
+    if (derPresionado && cx < canvas.width - cohete.anchoCohete - 20) {
+        cx += 5 + ((gamespeed * -1) - 2);
     } else if (izqpresionado && cx > 7) {
-        cx -=5 +((gamespeed*-1)-2);
+        cx -= 5 + ((gamespeed * -1) - 2);
     }
 }
 
 
-
-var gamespeed = -2;
+var gamespeed = -1;
 
 var fy = 0;
 var f2 = 600;
@@ -135,7 +138,7 @@ obstaculo[i] = {
 
 
 var avion747 = {
-    ancho: 250,
+    ancho: 257,
     alto: 87,
     posx: canvas.width * Math.random(),
     posy: -20,
@@ -163,9 +166,13 @@ var satelite = {
 }
 
 
+
 function detectarcolision() {
     if (cx + (cohete.anchoCohete / 2) > avion747.posx && cx + (cohete.anchoCohete / 2) < avion747.posx + avion747.ancho && cy + (cohete.altoCohete / 2) > avion747.posy && cy + (cohete.altoCohete / 2) < avion747.posy + avion747.alto ||
-        cx + (cohete.anchoCohete / 2) > avionf16.posx && cx + (cohete.anchoCohete / 2) < avionf16.posx + avionf16.ancho && cy + (cohete.altoCohete / 2) > avionf16.posy && cy + (cohete.altoCohete / 2) < avionf16.posy + avionf16.alto) {
+        cx + (cohete.anchoCohete / 2) > avionf16.posx && cx + (cohete.anchoCohete / 2) < avionf16.posx + avionf16.ancho && cy + (cohete.altoCohete / 2) > avionf16.posy && cy + (cohete.altoCohete / 2) < avionf16.posy + avionf16.alto ||
+        cx + (cohete.anchoCohete / 2) > avionf16izq.posx && cx + (cohete.anchoCohete / 2) < avionf16izq.posx + avionf16izq.ancho && cy + (cohete.altoCohete / 2) > avionf16izq.posy && cy + (cohete.altoCohete / 2) < avionf16izq.posy + avionf16izq.alto ||
+        cx + (cohete.anchoCohete / 2) > satelite.posx && cx + (cohete.anchoCohete / 2) < satelite.posx + satelite.ancho && cy + (cohete.altoCohete / 2) > satelite.posy && cy + (cohete.altoCohete / 2) < satelite.posy + satelite.alto) {
+
         estado = true
         sonidoexplocion.play();
         sonidocohete.pause();
@@ -180,11 +187,10 @@ function detectarcolision() {
             ctx.fillText("!GAME OVER", (canvas.width / 2) - 205, (canvas.height / 2) - 170);
             ctx.font = "40px Arial black";
             ctx.fillStyle = "#dc1a1a"
-            ctx.fillText(jugador +"!", (canvas.width / 2) - 100, (canvas.height / 2) - 130);
+            ctx.fillText(jugador + "!", (canvas.width / 2) - 100, (canvas.height / 2) - 130);
             ctx.font = "20px Arial black";
             ctx.fillStyle = "#ffffff"
             ctx.fillText("Final Score: " + this.puntajeF, (canvas.width / 2) - 90, (canvas.height / 2) - 95);
-
 
 
         }
@@ -207,7 +213,11 @@ var puntaje = {
 }
 
 function dificultad() {
-    if (puntajeF === 500) {
+    if (puntajeF === 200) {
+        gamespeed = gamespeed - 0.5
+    }else if(puntajeF===300){
+        gamespeed=gamespeed-0.5
+    } else if (puntajeF === 500) {
         gamespeed = gamespeed - 1;
     } else if (puntajeF === 1000) {
         gamespeed = gamespeed - 1;
@@ -219,22 +229,32 @@ function dificultad() {
         gamespeed = gamespeed - 1;
     } else if (puntajeF === 3000) {
         gamespeed = gamespeed - 1;
-    } else if (puntajeF===3500) {
+    } else if (puntajeF === 3500) {
         gamespeed = gamespeed - 1;
-    }else if (puntajeF===4000) {
+        complicacion = true;
+    } else if (puntajeF === 4000) {
         gamespeed = gamespeed - 1;
-    }else if(puntajeF===4500){
-        gamespeed=gamespeed-1;
-    }else if(puntajeF===5000) {
+    } else if (puntajeF === 4500) {
         gamespeed = gamespeed - 1;
-    }else if(puntajeF===5500){
-            gamespeed = gamespeed - 2
-        }
+    } else if (puntajeF === 5000) {
+        gamespeed = gamespeed - 1;
+    } else if (puntajeF === 5500) {
+        gamespeed = gamespeed - 2
+    }
+
 }
+
+var verga=canvas.height-460;
+
+function reiniciar() {
+    window.location.reload()
+}
+
 
 function dibujar() {
 
     fondo();
+    ctx.drawImage(pasto,-70,verga)
     ctx.drawImage(imagenCohete, cx, cy);
 
     for (var i = 0; i < obstaculo.length; i++) {
@@ -251,20 +271,24 @@ function dibujar() {
         ctx.drawImage(f16derecha, avionf16.posx, avionf16.posy);
         ctx.drawImage(f16izquierda, avionf16izq.posx, avionf16izq.posy);
 
-        ctx.drawImage(satelitei, satelite.posx, satelite.posy)
+        //ctx.drawImage(fuego,cx,cy+cohete.altoCohete)
 
-        // ctx.drawImage(nubetor, obstaculo[i].x, 180)
+        if (complicacion === true) {
+            ctx.drawImage(satelitei, satelite.posx, satelite.posy)
+            satelite.posy = satelite.posy + (gamespeed * -1);
+        }
+
         //movimiento de los obstaculos
         avion747.posx = avion747.posx - ((gamespeed * -1));
-        avion747.posy = avion747.posy + ((gamespeed * -1)/1.5);
+        avion747.posy = avion747.posy + ((gamespeed * -1) / 1.5);
+
+        verga= verga + (gamespeed * -1);
 
         avionf16.posx = avionf16.posx - (gamespeed * -1);
-        avionf16.posy = avionf16.posy  + ((gamespeed * -1)/1.5);
+        avionf16.posy = avionf16.posy + ((gamespeed * -1) / 1.5);
 
         avionf16izq.posx = avionf16izq.posx + (gamespeed * -1);
         avionf16izq.posy = avionf16izq.posy + (gamespeed * -1);
-
-        satelite.posy = satelite.posy + (gamespeed * -1);
 
 
         if (avion747.posx <= 20 - avion747.ancho) {
@@ -280,23 +304,22 @@ function dibujar() {
             avionf16izq.posy = (Math.random() * 15);
         }
         if (satelite.posx > 600 - satelite.ancho || satelite.posy > 700) {
-            satelite.posx = ((canvas.width/2)+100)*(Math.random()*5);
+            satelite.posx = ((canvas.width / 2) + 100) * (Math.random() * 5);
             satelite.posy = -150;
         }
+
+
+        dificultad()
+        movercohete()
+        detectarcolision()
+        puntaje.mostrar();
+
+        animacion = window.requestAnimationFrame(dibujar)
+        if (alerta === true) {
+            window.cancelAnimationFrame(animacion);
+        }
+
     }
-
-
-
-    dificultad()
-    movercohete()
-    detectarcolision()
-    puntaje.mostrar();
-
-    animacion = window.requestAnimationFrame(dibujar)
-    if (alerta === true) {
-        window.cancelAnimationFrame(animacion);
-    }
-
 }
 
 dibujar()
