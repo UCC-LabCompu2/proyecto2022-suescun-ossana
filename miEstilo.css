@@ -72,11 +72,11 @@ body{
     overflow: hidden;
 }
 .jugar{
-    width: 390px;
-    height: 110px;
+    width: 400px;
+    height: 60px;
     float: right;
-    padding: 5px;
-    margin: 2%;
+    padding: 1px;
+
     overflow: hidden;
 
 }
@@ -252,36 +252,35 @@ margin:5px;}
 .boton4{
     position: relative;
     float: right;
-    top:20%;
+    top:8%;
     width: 180px;
     height: 50px;
     align-items: center;
     justify-content: center;
     background-size: cover;
-    border-radius: 7%;
+    border-radius: 12%;
     border: none;
     cursor: pointer;
     font-size: 20px;
     font-family: "Roboto Light", serif;
-    background: #ffffff;
-    box-shadow: 0 5px 1px rgb(108, 92, 92);
+
 }
 .boton5{
     position: relative;
     float:left;
-    top:20%;
+    top:8%;
+    left: 5%;
     width: 180px;
     height: 50px;
     align-items: center;
     justify-content: center;
     background-size: cover;
-    border-radius: 7%;
+    border-radius: 12%;
     border: none;
     cursor: pointer;
     font-size: 20px;
     font-family: "Roboto Light", serif;
-    background: #ffffff;
-    box-shadow: 0 5px 1px rgb(108, 92, 92);
+
 }
 
 @media screen and (max-width: 600px){
