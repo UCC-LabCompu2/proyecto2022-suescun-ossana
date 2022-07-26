@@ -21,70 +21,71 @@ function nombreusuario() {
 }
 
 //inicio de declaracion
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d")
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d")
 
 // cargar imagenes
-var imagenCohete = new Image();
+const imagenCohete = new Image();
 imagenCohete.src = "Imagenes/cohete2.png "
 
-var imamgenFondo = new Image();
+const imamgenFondo = new Image();
 imamgenFondo.src = "Imagenes/nubes22.jpg"
 
-var avion747derecha = new Image();
+const avion747derecha = new Image();
 avion747derecha.src = "Imagenes/aviondere.png"
 
-var f16derecha = new Image();
+const f16derecha = new Image();
 f16derecha.src = "Imagenes/f16derecha.png"
 
-var f16izquierda = new Image();
+const f16izquierda = new Image();
 f16izquierda.src = "Imagenes/f16izquierda.png"
 
-var satelitei = new Image();
+const satelitei = new Image();
 satelitei.src = "Imagenes/satelite.png"
 
-var nubetor = new Image();
+const nubetor = new Image();
 nubetor.src = "Imagenes/nube.png"
 
-var pasto = new Image();
+const pasto = new Image();
 pasto.src = "Imagenes/pasto.png"
 
-var fuego = new Image();
+const fuego = new Image();
 fuego.src = "Imagenes/fuego22.png"
 
-var elon = new Image();
-    elon.src= "Imagenes/elontriste2.png"
+const elon = new Image();
+elon.src = "Imagenes/elontriste2.png"
 
-var logo = new Image();
-    logo.src= "Imagenes/logo2.png"
+const logo = new Image();
+logo.src = "Imagenes/logo2.png"
+
 // cargar sonidos
-var sonidocohete = new Audio();
+const sonidocohete = new Audio();
 sonidocohete.src = "sonidos/cohete.mp3"
 
-var sonidoexplocion = new Audio();
+const sonidoexplocion = new Audio();
 sonidoexplocion.src = "sonidos/explocion.mp3"
 
 
 //objeto cohete
-var cohete = {
+const cohete = {
     altoCohete: 145,
     anchoCohete: 30,
 
 };
 
 // algunas variables globales que utilizamos
-var cx = (canvas.width - cohete.anchoCohete) / 2;
-var cy = (canvas.height + cohete.altoCohete) / 2;
-var estado = false;
-var alerta = false;
-var complicacion = false;
-var derPresionado = false;
-var izqpresionado = false;
-var gamespeed = -1;
-var fy = 0;
-var f2 = 600;
-var i = 0
-var obstaculo = [i];
+let cx = (canvas.width - cohete.anchoCohete) / 2;
+let cy = (canvas.height + cohete.altoCohete) / 2;
+let estado = false;
+let alerta = false;
+let complicacion = false;
+let derPresionado = false;
+let izqpresionado = false;
+let gamespeed = -1;
+let fy = 0;
+let f2 = 600;
+let i = 0
+let obstaculo = [i];
 jugador = window.location.href.split("#")[1]
 
 
@@ -159,31 +160,31 @@ function fondo() {
 
 
 //objeto avion 747
-var avion747 = {
-    ancho: 257,
+const avion747 = {
+    ancho: 260,
     alto: 87,
     posx: canvas.width * Math.random(),
     posy: -20,
 }
 
 // objeto avion f16
-var avionf16 = {
-    ancho: 153,
+const avionf16 = {
+    ancho: 155,
     alto: 88,
     posx: canvas.width * Math.random(),
     posy: 100,
 }
 
 //objeto avion f16 pero de la izquierda
-var avionf16izq = {
-    ancho: 153,
+const avionf16izq = {
+    ancho: 155,
     alto: 88,
-    posx: 0,
-    posy: 15,
+    posx: 2*Math.random(),
+    posy: 15 ,
 }
 
 //objeto satelite
-var satelite = {
+const satelite = {
     ancho: 80,
     alto: 43,
     posx: canvas.width / 2 * (Math.random() * 3),
@@ -191,7 +192,7 @@ var satelite = {
 }
 
 //objeto pasto
-var pasto1 = {
+const pasto1 = {
     posy: (canvas.height - 450),
     posx: -100,
 }
@@ -208,7 +209,8 @@ function detectarcolision() {
         cx + (cohete.anchoCohete / 2) > satelite.posx && cx + (cohete.anchoCohete / 2) < satelite.posx + satelite.ancho && cy + (cohete.altoCohete / 2) > satelite.posy && cy + (cohete.altoCohete / 2) < satelite.posy + satelite.alto) {
 
         estado = true
-        sonidoexplocion.play();
+        sonidoexplocion.play().then(() => {
+        });
         sonidocohete.pause();
         if (estado === true) {
             alerta = true
@@ -222,14 +224,14 @@ function detectarcolision() {
             ctx.fillText(jugador + "!", (canvas.width / 2) - 100, (canvas.height / 2) - 130);
             ctx.font = "25px times new roman black";
             ctx.fillStyle = "#ffffff"
-            ctx.fillText("FINAL SCORE: " + this.puntajeF, (canvas.width / 2) - 100, (canvas.height / 2) - 95);
-            ctx.drawImage(elon,(canvas.width/2)-245, canvas.height/2-80)
+            ctx.fillText("FINAL SCORE: " + puntaje.puntos, (canvas.width / 2) - 100, (canvas.height / 2) - 95);
+            ctx.drawImage(elon, (canvas.width / 2) - 245, canvas.height / 2 - 80)
         }
     }
 }
 
 // objeto puntaje- muestra en la esquina superio el puntaj-
-var puntaje = {
+const puntaje = {
     puntos: 0,
     /**
      * Muestra en pantalla el puntaje actual del juego
@@ -247,38 +249,38 @@ var puntaje = {
  * @method dificultad
  */
 function dificultad() {
-    if (puntajeF === 200) {
+    if ( puntaje.puntos=== 200) {
         gamespeed = gamespeed - 0.5
-    } else if (puntajeF === 300) {
+    } else if ( puntaje.puntos=== 300) {
         gamespeed = gamespeed - 0.5
-    } else if (puntajeF === 500) {
+    } else if ( puntaje.puntos=== 500) {
         gamespeed = gamespeed - 1;
-    } else if (puntajeF === 1000) {
+    } else if ( puntaje.puntos=== 1000) {
         gamespeed = gamespeed - 1;
-    } else if (puntajeF === 1500) {
+    } else if (puntaje.puntos === 1500) {
         gamespeed = gamespeed - 1
-    } else if (puntajeF === 2000) {
+    } else if ( puntaje.puntos=== 2000) {
         gamespeed = gamespeed - 1
-    } else if (puntajeF === 2500) {
+    } else if ( puntaje.puntos=== 2500) {
         gamespeed = gamespeed - 1;
-    } else if (puntajeF === 3000) {
+    } else if ( puntaje.puntos=== 3000) {
         gamespeed = gamespeed - 1;
-    } else if (puntajeF === 3500) {
+    } else if ( puntaje.puntos=== 3500) {
         gamespeed = gamespeed - 1;
         complicacion = true;
-    } else if (puntajeF === 4000) {
+    } else if (puntaje.puntos === 4000) {
         gamespeed = gamespeed - 1;
-    } else if (puntajeF === 4500) {
+    } else if (puntaje.puntos === 4500) {
         gamespeed = gamespeed - 1;
-    } else if (puntajeF === 5000) {
+    } else if ( puntaje.puntos=== 5000) {
         gamespeed = gamespeed - 1;
-    } else if (puntajeF === 5500) {
+    } else if (puntaje.puntos === 5500) {
         gamespeed = gamespeed - 2
-    } else if (puntajeF === 5750) {
+    } else if ( puntaje.puntos=== 5750) {
         gamespeed = gamespeed - 2
-    } else if (puntajeF === 6000) {
+    } else if (puntaje.puntos === 6000) {
         gamespeed = gamespeed - 2
-    } else if (puntajeF === 6500) {
+    } else if ( puntaje.puntos=== 6500) {
         gamespeed = gamespeed - 5
     }
 }
@@ -300,21 +302,20 @@ function reiniciar() {
 function interacciondeObjetos() {
 
     ctx.drawImage(pasto, pasto1.posx, pasto1.posy)
-    ctx.drawImage(fuego,cx-37,cy+113)
+    ctx.drawImage(fuego, cx - 37, cy + 113)
     ctx.drawImage(imagenCohete, cx, cy);
-    ctx.drawImage(logo, canvas.width-136,0)
-    for (var i = 0; i < obstaculo.length; i++) {
+    ctx.drawImage(logo, canvas.width - 136, 0)
+    for (let i = 0; i < obstaculo.length; i++) {
         //incremento del puntaje
         puntaje.puntos = puntaje.puntos + 1;
-        puntajeF = puntaje.puntos
         //activacion del sonido
-        sonidocohete.play()
+        sonidocohete.play().then(() => {
+        });
         sonidocohete.loop
         //dibujo de los obstaculos que aparecen
         ctx.drawImage(avion747derecha, avion747.posx, avion747.posy);
         ctx.drawImage(f16derecha, avionf16.posx, avionf16.posy);
         ctx.drawImage(f16izquierda, avionf16izq.posx, avionf16izq.posy);
-
 
 
         if (complicacion === true) {
@@ -351,6 +352,7 @@ function interacciondeObjetos() {
         }
     }
 }
+
 /**
  *Funcion principal, ejecuta todas las demas funciones.
  * @method dibujar()
@@ -361,10 +363,10 @@ function dibujar() {
     interacciondeObjetos();
     dificultad();
     movercohete();
-    detectarcolision()
     puntaje.mostrar();
+    detectarcolision();
 
-    var animacion = window.requestAnimationFrame(dibujar)
+    const animacion = window.requestAnimationFrame(dibujar)
     //una vez que chocan los objetos se detiene el desarollo del juego.
     if (alerta === true) {
         window.cancelAnimationFrame(animacion);

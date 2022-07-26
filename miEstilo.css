@@ -1,12 +1,13 @@
 /*estilo por tag(se aplica a todos los selectores: */
-body{
-    background-image:url("Imagenes/marr_spacx2.jpg");
-    background-size:cover;
+body {
+    background-image: url("Imagenes/marr_spacx2.jpg");
+    background-size: cover;
     background-attachment: fixed;
 }
-#body2{
-    background-image:url("Imagenes/universo_estrellas.jpg");
-    background-size:cover;
+
+#body2 {
+    background-image: url("Imagenes/universo_estrellas.jpg");
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -19,14 +20,15 @@ body{
     background-repeat: repeat-x;
     background-attachment: fixed;
     text-shadow: 2px 2px #0B0B13FF;
-    margin:-11px;
+    margin: -11px;
     padding: 1px;
     text-align: left;
     font-size: 30px;
 }
+
 .nombreusuario {
-    background: rgba(260,260,260,.2);
-    box-shadow: 0 15px 20px rgba(0,0,0,.2);
+    background: rgba(260, 260, 260, .2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
     width: 35%;
     padding: 1px;
     text-align: left;
@@ -34,13 +36,15 @@ body{
 
     float: right;
 }
-.contenedor{
-    width:98%;
+
+.contenedor {
+    width: 98%;
     max-width: 1200px;
-    margin:  auto;
+    margin: auto;
 
 }
-.div1{
+
+.div1 {
     background: rgba(260, 260, 260, .2);
     box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
     width: 45%;
@@ -48,9 +52,11 @@ body{
     margin: 2%;
     overflow: auto;
 }
-.div1 h4{
+
+.div1 h4 {
     font-size: 25px;
 }
+
 .div2 {
     background: rgba(260, 260, 260, .2);
     box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
@@ -59,10 +65,12 @@ body{
     margin: 2%;
     overflow: hidden;
 }
-.div2 h4{
+
+.div2 h4 {
     font-size: 25px;
 }
-.start{
+
+.start {
 
     width: 230px;
     height: 190px;
@@ -71,7 +79,8 @@ body{
     margin: 2%;
     overflow: hidden;
 }
-.jugar{
+
+.jugar {
     width: 400px;
     height: 60px;
     float: right;
@@ -80,14 +89,15 @@ body{
     overflow: hidden;
 
 }
+
 .boton {
     position: relative;
     align-items: center;
     justify-content: center;
-    width:70%;
+    width: 70%;
     height: 80%;
     background: rgba(250, 6, 6, 0.65);
-    color:white;
+    color: white;
     font-family: "Roboto Light", serif;
     font-size: 50px;
     font-weight: 500;
@@ -95,19 +105,21 @@ body{
     text-transform: uppercase;
     border: rgba(26, 24, 24, 0.87);
     border-radius: 50%;
-    box-shadow: 0 15px 1px rgba(0,0,0,0.5);
+    box-shadow: 0 15px 1px rgba(0, 0, 0, 0.5);
 
 }
-.boton:hover{
-    box-shadow: 0 15px 1px rgba(0,0,0,0.5) ;
+
+.boton:hover {
+    box-shadow: 0 15px 1px rgba(0, 0, 0, 0.5);
     transform: scale(.98);
 }
-.boton2{
+
+.boton2 {
     position: relative;
     align-items: center;
     justify-content: center;
     height: 35px;
-    width:130px;
+    width: 130px;
     text-align: center;
     font-family: "Roboto Light", serif;
     font-weight: 500;
@@ -116,109 +128,119 @@ body{
     color: #000000;
     background: #a49b9a;
     border: rgba(26, 24, 24, 0.87);
-    border-radius:8%;
-    box-shadow: 0 5px 1px rgba(0,0,0,0.5);
+    border-radius: 8%;
+    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     margin: 2%;
 }
-.boton2:hover{
+
+.boton2:hover {
     transform: scale(.95);
 }
 
-ul{
+ul {
     color: #000000;
     font-family: "Roboto Light", serif;
 }
-footer{
-    color: #ffffff; font-family:"Roboto Light", serif;text-align: left;align-items: end;
+
+footer {
+    color: #ffffff;
+    font-family: "Roboto Light", serif;
+    text-align: left;
+    align-items: end;
     font-size: 15px;
     float: right;
     margin: 10px;
 }
-#myCanvas{
+
+#myCanvas {
 
 
     margin: 0 auto;
     display: block;
 }
 
-#divGeneral{
-    width:80%;
+#divGeneral {
+    width: 80%;
     max-width: 1200px;
 
     margin: 50px auto auto;
     height: 1200px;
 
 }
+
 .video-responsive {
     float: right;
-    width:50% ;
+    width: 50%;
     height: 30%;
 
-    border-radius:7%;
+    border-radius: 7%;
     margin: -20px;
 }
 
 
-
-.divideaproyecto1{
+.divideaproyecto1 {
     width: 47%;
-    height:218px;
+    height: 218px;
     text-align: left;
-    background: rgba(260,260,260,.2);
-    box-shadow: 0 15px 20px rgba(0,0,0,.4);
-    border-radius:7%;
+    background: rgba(260, 260, 260, .2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .4);
+    border-radius: 7%;
     padding: 8px;
-    margin:5px;
+    margin: 5px;
 }
 
-.ideaproyecto2{
-   width:47%;
-    height:345px;
+.ideaproyecto2 {
+    width: 47%;
+    height: 345px;
     text-align: left;
-    background: rgba(260,260,260,.2);
-    box-shadow: 0 15px 20px rgba(0,0,0,.4);
-    border-radius:7%;
+    background: rgba(260, 260, 260, .2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .4);
+    border-radius: 7%;
     padding: 8px;
-    margin:1px;
+    margin: 1px;
 }
-.lista1{
+
+.lista1 {
     font-size: 17px;
 }
 
-.ideaproyecto3{
-width: 47%;
-   height: 47%;
+.ideaproyecto3 {
+    width: 47%;
+    height: 47%;
     float: right;
-    background: rgba(260,260,260,.2);
-    box-shadow: 0 15px 20px rgba(0,0,0,.4);
-    border-radius:7%;
+    background: rgba(260, 260, 260, .2);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .4);
+    border-radius: 7%;
     padding: 8px;
     margin: -25px;
 }
-.ideaproyecto40{
+
+.ideaproyecto40 {
     width: 47%;
-    height:500px;
+    height: 500px;
     float: left;
-    background-image:url("Imagenes/elon-musk-spacex-tesla-lanzamiento-nasa-1.jpg");
-    border-radius:7%;
+    background-image: url("Imagenes/elon-musk-spacex-tesla-lanzamiento-nasa-1.jpg");
+    border-radius: 7%;
     padding: 8px;
-    margin:5px;
+    margin: 5px;
 }
-.ideaproyecto4{
+
+.ideaproyecto4 {
     width: 95%;
     height: 290px;
-position: center;
-background-image:url("Imagenes/elon-musk-spacex-tesla-lanzamiento-nasa-1.jpg");
-border-radius:7%;
-padding: 8px;
-margin:5px;}
+    position: center;
+    background-image: url("Imagenes/elon-musk-spacex-tesla-lanzamiento-nasa-1.jpg");
+    border-radius: 7%;
+    padding: 8px;
+    margin: 5px;
+}
 
 
-.boton3{
+.boton3 {
     position: relative;
     float: right;
-    top:15%;
+    top: 15%;
     width: 180px;
     height: 50px;
     background-size: cover;
@@ -228,29 +250,30 @@ margin:5px;}
     font-size: 20px;
     font-family: "Roboto Light", serif;
     background: #a49b9a;
-    box-shadow: 0 5px 1px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.5);
 }
-.boton3:hover{
-    transform: scale(.95);}
+
+.boton3:hover {
+    transform: scale(.95);
+}
 
 
-#paginajugar1{
+#paginajugar1 {
     width: 75%;
-    height:75%;
+    height: 75%;
     text-align: justify;
 
 
-
     padding-right: 0;
-    margin-left:10%;
+    margin-left: 10%;
 }
 
 
 /*noinspection DuplicatedCode*/
-.boton4{
+.boton4 {
     position: relative;
     float: right;
-    top:8%;
+    top: 8%;
     height: 51px;
     width: 180px;
     background-size: cover;
@@ -263,10 +286,11 @@ margin:5px;}
     font-family: "Roboto Light", serif;
 
 }
-.boton5{
+
+.boton5 {
     position: relative;
-    float:left;
-    top:8%;
+    float: left;
+    top: 8%;
     left: 5%;
     width: 181px;
     height: 50px;
@@ -282,16 +306,14 @@ margin:5px;}
 }
 
 #dessarolladores {
- color: white;
+    color: white;
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
 
 
-
-
-    .div1{
+    .div1 {
 
         width: 95%;
         height: 100%;
@@ -300,6 +322,7 @@ margin:5px;}
         border-radius: 5%;
 
     }
+
     .div2 {
         background: rgba(260, 260, 260, .2);
         box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
@@ -309,31 +332,34 @@ margin:5px;}
         border-radius: 5%;
         overflow: hidden;
     }
+
     .nombreusuario {
-        background: rgba(260,260,260,.2);
+        background: rgba(260, 260, 260, .2);
         width: 80%;
         height: 100%;
         padding: 1px;
         text-align: left;
         font-size: 20px;
         margin: 20px 10px 10px 1px;
-        float:left;
+        float: left;
     }
-    .contenedor{
-        width:100%;
+
+    .contenedor {
+        width: 100%;
         max-width: 450px;
         margin: 0 auto;
 
-}
+    }
+
     .boton {
         position: relative;
         left: 30%;
         align-items: center;
         justify-content: center;
-        width:170px;
+        width: 170px;
         height: 70px;
         background: rgba(250, 6, 6, 0.65);
-        color:white;
+        color: white;
         font-family: "Roboto Light", serif;
         font-size: 50px;
         font-weight: 500;
@@ -341,10 +367,11 @@ margin:5px;}
         text-transform: uppercase;
         border: rgba(26, 24, 24, 0.87);
         border-radius: 15%;
-        box-shadow: 0 15px 1px rgba(0,0,0,0.5);
+        box-shadow: 0 15px 1px rgba(0, 0, 0, 0.5);
 
     }
-    .start{
+
+    .start {
 
         width: 100%;
         height: 40%;
@@ -355,79 +382,85 @@ margin:5px;}
     }
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 750px) {
 
-    #divGeneral{
-        width:80%;
+    #divGeneral {
+        width: 80%;
         max-width: 1200px;
 
         margin: 50px auto auto;
         height: 1200px;
 
     }
+
     .divideaproyecto1 {
 
         width: 100%;
-        height:25%;
-        text-align:center;
-        margin:5% 0 5% 0;
+        height: 25%;
+        text-align: center;
+        margin: 5% 0 5% 0;
 
     }
 
-    .ideaproyecto2{
-        width:100%;
-        height:50%;
+    .ideaproyecto2 {
+        width: 100%;
+        height: 50%;
 
         text-align: center;
 
         padding: 8px;
-        margin:5% 0 5% 0;
+        margin: 5% 0 5% 0;
 
     }
-    .ideaproyecto3{
-        
+
+    .ideaproyecto3 {
+
         position: relative;
 
         width: 100%;
         height: 60%;
-        float:none;
-        background: rgba(260,260,260,.2);
-        box-shadow: 0 15px 20px rgba(0,0,0,.4);
-        border-radius:7%;
+        float: none;
+        background: rgba(260, 260, 260, .2);
+        box-shadow: 0 15px 20px rgba(0, 0, 0, .4);
+        border-radius: 7%;
         padding: 8px;
-        margin:5% 0 5% 0;
+        margin: 5% 0 5% 0;
 
     }
+
     /* Start: Video Responsive */
     .video-responsive2 {
-        overflow:hidden;
-        padding-bottom:55%; /* Adecua este valor para controlar la altura del video */
-        position:relative;
-        top:5%;
-        left:  3%;
-        height:0;
-        width:95% ;
-        border-radius:7%;
+        overflow: hidden;
+        padding-bottom: 55%; /* Adecua este valor para controlar la altura del video */
+        position: relative;
+        top: 5%;
+        left: 3%;
+        height: 0;
+        width: 95%;
+        border-radius: 7%;
 
     }
-    .video-responsive2 iframe{
-        left:0;
-        top:0;
-        height:100%;
-        width:100%;
-        position:absolute;
-    }
-    .video-responsive{
-        display:none;
+
+    .video-responsive2 iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
     }
 
-   .ideaproyecto40{
-    display: none;
-}
-    .boton3{
+    .video-responsive {
+        display: none;
+    }
+
+    .ideaproyecto40 {
+        display: none;
+    }
+
+    .boton3 {
         position: relative;
         float: right;
-        top:5%;
+        top: 5%;
         right: 7%;
         width: 180px;
         height: 50px;
@@ -438,16 +471,20 @@ margin:5px;}
         font-size: 20px;
         font-family: "Roboto Light", serif;
         background: #a49b9a;
-        box-shadow: 0 5px 1px rgba(0,0,0,0.5);
+        box-shadow: 0 5px 1px rgba(0, 0, 0, 0.5);
     }
-    .boton3:hover{
-        transform: scale(.95);}
-}
-@media screen and (min-width: 750px){
-    .video-responsive2{
-        display:none;
+
+    .boton3:hover {
+        transform: scale(.95);
     }
-.ideaproyecto4{
-    display: none;
 }
+
+@media screen and (min-width: 750px) {
+    .video-responsive2 {
+        display: none;
+    }
+
+    .ideaproyecto4 {
+        display: none;
+    }
 }
