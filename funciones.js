@@ -192,7 +192,7 @@ var satelite = {
 
 //objeto pasto
 var pasto1 = {
-    posy: (canvas.height - 460),
+    posy: (canvas.height - 450),
     posx: -100,
 }
 
