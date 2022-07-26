@@ -126,11 +126,11 @@ body{
 }
 
 ul{
-    color: #020101;
+    color: #000000;
     font-family: "Roboto Light", serif;
 }
 footer{
-    color: #030303; font-family:"Roboto Light", serif;text-align: left;align-items: end;
+    color: #ffffff; font-family:"Roboto Light", serif;text-align: left;align-items: end;
     font-size: 15px;
     float: right;
     margin: 10px;
@@ -238,8 +238,7 @@ margin:5px;}
     width: 75%;
     height:75%;
     text-align: justify;
-    background: rgba(260,260,260,.2);
-    box-shadow: 0 15px 20px rgba(0,0,0,.4);
+
 
 
     padding-right: 0;
@@ -281,6 +280,11 @@ margin:5px;}
     font-family: "Roboto Light", serif;
 
 }
+
+#dessarolladores {
+ color: white;
+}
+
 
 @media screen and (max-width: 600px){
 

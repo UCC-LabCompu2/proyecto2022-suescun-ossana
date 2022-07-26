@@ -49,10 +49,14 @@ nubetor.src = "Imagenes/nube.png"
 var pasto = new Image();
 pasto.src = "Imagenes/pasto.png"
 
-
 var fuego = new Image();
 fuego.src = "Imagenes/fuego22.png"
 
+var elon = new Image();
+    elon.src= "Imagenes/elontriste2.png"
+
+var logo = new Image();
+    logo.src= "Imagenes/logo2.png"
 // cargar sonidos
 var sonidocohete = new Audio();
 sonidocohete.src = "sonidos/cohete.mp3"
@@ -210,15 +214,16 @@ function detectarcolision() {
             alerta = true
             ctx.fillRect((canvas.width / 2) - 250, (canvas.height / 2) - 250, 500, 500);
             ctx.fill();
-            ctx.font = "60px Arial black";
+            ctx.font = " 60px times new roman black";
             ctx.fillStyle = "#dc1a1a"
-            ctx.fillText("!GAME OVER", (canvas.width / 2) - 205, (canvas.height / 2) - 170);
-            ctx.font = "40px Arial black";
+            ctx.fillText("!GAME OVER", (canvas.width / 2) - 205, (canvas.height / 2) - 175);
+            ctx.font = "60px times new roman black";
             ctx.fillStyle = "#dc1a1a"
             ctx.fillText(jugador + "!", (canvas.width / 2) - 100, (canvas.height / 2) - 130);
-            ctx.font = "20px Arial black";
+            ctx.font = "25px times new roman black";
             ctx.fillStyle = "#ffffff"
-            ctx.fillText("Final Score: " + this.puntajeF, (canvas.width / 2) - 90, (canvas.height / 2) - 95);
+            ctx.fillText("FINAL SCORE: " + this.puntajeF, (canvas.width / 2) - 100, (canvas.height / 2) - 95);
+            ctx.drawImage(elon,(canvas.width/2)-245, canvas.height/2-80)
         }
     }
 }
@@ -297,7 +302,7 @@ function interacciondeObjetos() {
     ctx.drawImage(pasto, pasto1.posx, pasto1.posy)
     ctx.drawImage(fuego,cx-37,cy+113)
     ctx.drawImage(imagenCohete, cx, cy);
-
+    ctx.drawImage(logo, canvas.width-136,0)
     for (var i = 0; i < obstaculo.length; i++) {
         //incremento del puntaje
         puntaje.puntos = puntaje.puntos + 1;
